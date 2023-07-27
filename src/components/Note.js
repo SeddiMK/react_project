@@ -53,11 +53,16 @@ function Note() {
     window.location.href = env.url + '/' + url;
   }
 
+  function searchNote() {}
+
   return (
     <div>
       <div className={lineClass}>
         <h4>Note:</h4>
         <div>{noteText}</div>
+        <div>
+          <button onClick={searchNote}>Check more note</button>
+        </div>
       </div>
       <div className={errorClass}>
         <p>Error. Hesh or note not found.</p>
