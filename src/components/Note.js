@@ -53,7 +53,9 @@ function Note() {
     window.location.href = env.url + '/' + url;
   }
 
-  function searchNote() {}
+  function searchNote() {
+    window.location.href = env.url;
+  }
 
   return (
     <div>
