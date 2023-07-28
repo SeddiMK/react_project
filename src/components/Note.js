@@ -1,4 +1,3 @@
-// http://localhost:3000/note/np0u7h60qvyjtz4voo9hq5z7
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import env from '../env.json';
@@ -38,7 +37,7 @@ function Note() {
       setFormClass('');
       setErrorClass('hide');
     }
-  }, []);
+  }, [noteURL]);
 
   function getNote(e) {
     e.preventDefault();

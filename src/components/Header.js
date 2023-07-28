@@ -5,7 +5,26 @@ function Header() {
     <div>
       <nav>
         <ul>
-          <li>NavLinc</li>
+          <li>
+            <NavLink className="" to="/">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="" to="/note">
+              Note
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="" to="/create">
+              Create
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="" to="/about">
+              About
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </div>
