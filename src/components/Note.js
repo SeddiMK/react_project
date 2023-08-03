@@ -57,7 +57,7 @@ function Note() {
   }
 
   return (
-    <div>
+    <main className="main-page">
       <div className={lineClass}>
         <h4>Note:</h4>
         <div>{noteText}</div>
@@ -77,7 +77,7 @@ function Note() {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 }
 

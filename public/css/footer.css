@@ -1,0 +1,9 @@
+.footer {
+  /* display: flex;
+  align-items: center;
+  justify-content: flex-start; */
+  /* padding: 1.3rem; */
+  min-height: 80px;
+  background-color: #d3d3d3;
+  flex: 0 0 auto;
+}

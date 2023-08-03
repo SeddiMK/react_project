@@ -1,5 +1,5 @@
 function Error() {
-  return <div></div>;
+  return <main className="main-page"></main>;
 }
 
 export default Error;

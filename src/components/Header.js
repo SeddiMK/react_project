@@ -2,7 +2,11 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-    <div>
+    <header className="header">
+      <a href="/" className="header__logo">
+        Notes
+      </a>
+
       <nav>
         <ul>
           <li>
@@ -27,7 +31,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }
 

@@ -38,7 +38,7 @@ function Create() {
   };
 
   return (
-    <div>
+    <main className="main-page">
       <form onSubmit={loadDataFromForm} className={formClass}>
         <label htmlFor="">Введите заметку</label>
         <textarea
@@ -60,7 +60,7 @@ function Create() {
           </button>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
