@@ -1,18 +1,32 @@
 .main {
-  height: 100vh;
+  flex: 1 0 auto;
   margin-bottom: 1rem;
 }
 .main-page {
   padding: 0.5rem 0;
   flex: 1 0 auto;
 }
+.btn {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  background-color: #a1b0f8;
+}
+.btn:hover {
+  background-color: #d3d3d3;
+  transition: all ease-in 0.2s;
+}
+.btn:active {
+  background-color: #a1b0f8;
+}
 .about {
   line-height: 1.3rem;
 }
 .about__me {
   display: block;
-  padding: 0.3rem;
+
   max-width: 16rem;
+  padding: 0.3rem;
+  margin-top: 1rem;
   border-radius: 0.3rem;
   background-color: #a1b0f8;
 }
@@ -69,4 +83,86 @@
   padding: 0 0.2rem;
   border-radius: 0.3rem;
   background-color: #a1b0f8;
+}
+
+#form-create {
+  display: flex;
+}
+#form-create label {
+  margin-right: 1rem;
+}
+.create__block-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+#note {
+  resize: none;
+  width: 17rem;
+  height: 10rem;
+  padding: 10px;
+
+  border-radius: 0.3rem;
+}
+.create__url {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  background-color: #a1b0f8;
+  margin-bottom: 1rem;
+}
+.create__url-input {
+  /* min-width: 26rem; */
+  min-width: 100%;
+  background-color: #a1b0f8;
+}
+.create__btn-copy-url {
+  max-width: 30%;
+  min-width: 8rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid black;
+}
+
+.create__btn-new-note {
+  border-radius: 0.3rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+  transition: all ease-in 0.2s;
+}
+
+.note {
+  display: flex;
+  gap: 1rem;
+}
+.note h4 {
+  margin-bottom: 1rem;
+}
+
+.note__form {
+}
+.note__form label {
+  margin-right: 1rem;
+}
+.note__form input {
+  margin-right: 1rem;
+}
+.note__note-text {
+  resize: none;
+  width: 17rem;
+  height: 10rem;
+  padding: 10px;
+
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
 }

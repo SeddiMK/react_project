@@ -15,13 +15,13 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="" to="/note">
-              Note
+            <NavLink className="" to="/create">
+              Create
             </NavLink>
           </li>
           <li>
-            <NavLink className="" to="/create">
-              Create
+            <NavLink className="" to="/note">
+              Note
             </NavLink>
           </li>
           <li>

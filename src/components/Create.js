@@ -19,7 +19,7 @@ function Create() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.result) {
           setUrl(env.url + '/' + data.url);
         }
@@ -31,35 +31,87 @@ function Create() {
     let note = e.target.elements.note.value;
     note = note.trim();
     if (note === '') {
-      alert('Заполните поле');
+      alert('Fill in the field');
       return false;
     }
     sendData({ note: note });
   };
 
+  let copyURL = () => {
+    // Get the text to be copied from the input field
+    const textToCopy = document.getElementById('textToCopy').value;
+
+    // Create a temporary textarea element to hold the text to be copied
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.value = textToCopy;
+
+    // Append the textarea to the document
+    document.body.appendChild(tempTextarea);
+
+    // Select the text inside the textarea
+    tempTextarea.select();
+
+    try {
+      // Copy the selected text to the clipboard
+      document.execCommand('copy');
+      // console.log('Text copied to clipboard!');
+    } catch (err) {
+      console.error('Unable to copy text to clipboard:', err);
+    } finally {
+      // Remove the temporary textarea from the document
+      document.body.removeChild(tempTextarea);
+    }
+  };
+
   return (
     <main className="main-page">
-      <form onSubmit={loadDataFromForm} className={formClass}>
-        <label htmlFor="">Enter note</label>
-        <textarea
-          name="note"
-          id="note"
-          defaultValue="Enter note text"
-        ></textarea>
-        <button type="submit">Create</button>
-      </form>
-      <div className={lineClass}>
-        <div>{url}</div>
-        <div>
-          <button
-            onClick={function () {
-              window.location.reload();
-            }}
-          >
-            Создать новую заметку
+      <section className="main-page__create create">
+        <form
+          onSubmit={loadDataFromForm}
+          id="form-create"
+          className={formClass}
+        >
+          <label htmlFor="">Enter note</label>
+          <div className="create__block-textarea">
+            <textarea
+              name="note"
+              id="note"
+              placeholder="Enter note text"
+              // defaultValue=""
+            ></textarea>
+            <button className="create__btn btn" type="submit">
+              Create
+            </button>
+          </div>
+        </form>
+
+        <div className={lineClass}>
+          {/* <div id="textToCopy" className="create__url">
+            {url}
+          </div> */}
+          <div id="textToCopy" className="create__url">
+            <input
+              type="text"
+              id="textToCopy"
+              className="create__url-input"
+              defaultValue={url}
+            />
+          </div>
+          <button className="create__btn-copy-url btn" onClick={copyURL}>
+            Copy link to Clipboard
           </button>
+          <div>
+            <button
+              className="create__btn-new-note btn"
+              onClick={function () {
+                window.location.reload();
+              }}
+            >
+              Create a new note
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

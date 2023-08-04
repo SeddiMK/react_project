@@ -58,25 +58,32 @@ function Note() {
 
   return (
     <main className="main-page">
-      <div className={lineClass}>
-        <h4>Note:</h4>
-        <div>{noteText}</div>
-        <div>
-          <button onClick={searchNote}>Check more note</button>
+      <section className="main-page__note note">
+        <div className={lineClass}>
+          <h4>Note:</h4>
+          <textarea
+            className="note__note-text"
+            defaultValue={noteText}
+          ></textarea>
+          <div>
+            <button className="btn" onClick={searchNote}>
+              Check more note
+            </button>
+          </div>
         </div>
-      </div>
-      <div className={errorClass}>
-        <p>Error. Hesh or note not found.</p>
-      </div>
-      <div className={formClass}>
-        <form action="" onSubmit={getNote}>
-          <label htmlFor="url">Please enter hash note</label>
-          <input type="text" name="url" id="url" className="form-control" />
-          <button type="submit" className="btn btn-primary">
-            Search note
-          </button>
-        </form>
-      </div>
+        <div className={errorClass}>
+          <p>Error. Hesh or note not found.</p>
+        </div>
+        <div className={formClass}>
+          <form action="" className="note__form" onSubmit={getNote}>
+            <label htmlFor="url">Please enter hash note</label>
+            <input type="text" name="url" id="url" className="form-control" />
+            <button type="submit" className="btn btn-primary">
+              Search note
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
   );
 }

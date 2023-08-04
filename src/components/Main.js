@@ -3,12 +3,12 @@ function Main() {
     <>
       <section className="actions-notes">
         <div>
-          <a href="/create" className="actions-notes__btn">
+          <a href="/create" className="actions-notes__btn btn">
             Сreate note
           </a>
         </div>
         <div>
-          <a href="/note" className="actions-notes__btn">
+          <a href="/note" className="actions-notes__btn btn">
             See note
           </a>
         </div>
