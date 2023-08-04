@@ -1,16 +1,41 @@
-.about {
-}
 .main {
-  height: 100%;
+  height: 100vh;
+  margin-bottom: 1rem;
 }
 .main-page {
+  padding: 0.5rem 0;
   flex: 1 0 auto;
-  height: 100%;
+}
+.about {
+  line-height: 1.3rem;
+}
+.about__me {
+  display: block;
+  padding: 0.3rem;
+  max-width: 16rem;
+  border-radius: 0.3rem;
+  background-color: #a1b0f8;
 }
 
 .actions-notes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 25rem;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
+
+.actions-notes__btn {
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+  background-color: #a1b0f8;
+}
+
 .about-app {
+  font-family: Tahoma, sans-serif;
+  line-height: 1.4rem;
 }
 .about-app__block-about-app {
 }
@@ -20,6 +45,15 @@
 }
 .block-about-app__text {
 }
+.block-about-app__text:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.block-about-app__text span {
+  font-family: Georgia, serif;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  background-color: #d3d3d3;
+}
 .block-about-app__instruction {
 }
 .instruction-app {
@@ -28,5 +62,11 @@
 }
 .instruction-app__text {
 }
+.instruction-app__text:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
 .instruction-app__link {
+  padding: 0 0.2rem;
+  border-radius: 0.3rem;
+  background-color: #a1b0f8;
 }

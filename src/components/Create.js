@@ -40,13 +40,13 @@ function Create() {
   return (
     <main className="main-page">
       <form onSubmit={loadDataFromForm} className={formClass}>
-        <label htmlFor="">Введите заметку</label>
+        <label htmlFor="">Enter note</label>
         <textarea
           name="note"
           id="note"
           defaultValue="Enter note text"
         ></textarea>
-        <button type="submit">Создать</button>
+        <button type="submit">Create</button>
       </form>
       <div className={lineClass}>
         <div>{url}</div>

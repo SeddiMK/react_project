@@ -3,17 +3,21 @@ function Main() {
     <>
       <section className="actions-notes">
         <div>
-          <a href="/create">Сreate note</a>
+          <a href="/create" className="actions-notes__btn">
+            Сreate note
+          </a>
         </div>
         <div>
-          <a href="/note">See note</a>
+          <a href="/note" className="actions-notes__btn">
+            See note
+          </a>
         </div>
       </section>
       <section className="about-app">
         <div className="about-app__block-about-app block-about-app">
-          <h2 className="block-about-app__title">noted</h2>
+          <h2 className="block-about-app__title">Encrypted notes</h2>
           <p className="block-about-app__text">
-            <span>Noted</span> - This application is designed to send notes or
+            <span>NoteS</span> - this application is designed to send notes or
             messages to another user or to your other computer. All notes and
             messages will be encrypted.
           </p>
@@ -22,7 +26,7 @@ function Main() {
             <p className="instruction-app__text">
               Follow the &nbsp;
               <a href="/create" className="instruction-app__link">
-                link
+                link Create
               </a>
             </p>
 
@@ -31,20 +35,19 @@ function Main() {
             </p>
 
             <p className="instruction-app__text">
-              <a className="instruction-app__link">
-                Send the generated address to a friend or to your other device
-              </a>
+              Send the generated address to a friend or to your other device
             </p>
 
             <p className="instruction-app__text">
-              How to read a note? Follow the provided URL link, or enter the
-              hash yourself &nbsp;
+              How to read a note? <br /> Follow the provided URL link, or enter
+              the hash yourself &nbsp;
               <a href="/note" className="instruction-app__link">
                 here.
               </a>
             </p>
             <p>
-              hash is all the last characters that come after the slash "/" .
+              hash is all the last characters that come after the slash "/" .{' '}
+              <br />
               For example: 5jsquzt9mtukx5hy4bnn5702
             </p>
           </div>

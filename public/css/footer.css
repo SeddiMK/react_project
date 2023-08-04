@@ -1,9 +1,11 @@
 .footer {
-  /* display: flex;
-  align-items: center;
-  justify-content: flex-start; */
-  /* padding: 1.3rem; */
-  min-height: 80px;
+  /* min-height: 80px; */
   background-color: #d3d3d3;
   flex: 0 0 auto;
+  padding: 0.5rem;
+}
+
+.about__me-no-bcg {
+  line-height: 1.2rem;
+  background-color: inherit;
 }
